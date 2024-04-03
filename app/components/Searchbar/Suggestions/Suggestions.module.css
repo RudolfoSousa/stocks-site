@@ -1,0 +1,54 @@
+.Suggestions {
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    max-height: 200px;
+    overflow: auto;
+    position: absolute;
+    background-color: #fff;
+    z-index: 2;
+    top: 41px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 20px 0px #C8D1E4;
+}
+
+.Header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #B8336A;
+}
+
+.List {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.List:last-child{
+    margin-bottom: 10px;
+}
+
+.Stock,
+.Name,
+.Close {
+    display: block;
+}
+
+.Stock {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.Name {
+    font-size: 10px;
+    margin-top: 1px;
+    margin-bottom: 5px;
+    color: #6F6866;
+}
+
+.Close {
+    font-size: 12px;
+}
