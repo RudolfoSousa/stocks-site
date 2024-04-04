@@ -3,15 +3,17 @@
     overflow: hidden;
 }
 
-.Icon {
+.Prefix{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+}
+
+.Suffix {
     position: absolute;
     right: 0px;
     top: 0px;
-}
-
-.Icon button {
-    border: none;
-    background-color: transparent;
     padding: 10px 15px;
 }
 
@@ -23,4 +25,8 @@
     background-color: #F2F4F7;
     font-size: 14px;
     padding: 10px 5px 10px 5px;
+}
+
+.Prefix + input {
+    padding-left: 35px;
 }
