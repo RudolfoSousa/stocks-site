@@ -12,16 +12,17 @@ export async function search(param) {
     if (res.status != 200) {
         throw new Error('Failed to fetch data')
     }
-    const response = await res.json();
 
-    if (response) {
+    const data = await res.json();
+
+    if (data.stock) {
         return ({
-            funds: response.stocks.filter(({ type }) => type === "fund"),
-            stocks: response.stocks.filter(({ type }) => type === "stock"),
-            bdrs: response.stocks.filter(({ type }) => type === "bdr"),
-            count: response.stocks.length
+            funds: data.stocks.filter(({ type }) => type === "fund"),
+            stocks: data.stocks.filter(({ type }) => type === "stock"),
+            bdrs: data.stocks.filter(({ type }) => type === "bdr"),
+            count: data.stocks.length,
         })
     } else {
-        throw new Error();
+        return null
     }
 }
