@@ -15,7 +15,7 @@ export async function search(param) {
 
     const data = await res.json();
 
-    if (data.stock) {
+    if (data.stocks) {
         return ({
             funds: data.stocks.filter(({ type }) => type === "fund"),
             stocks: data.stocks.filter(({ type }) => type === "stock"),
