@@ -1,6 +1,7 @@
 'use client'
 import { useRef } from 'react';
-import Input from "../Input";
+import { FaMagnifyingGlass } from "react-icons/fa6";
+import Input from "../shared/Input";
 import Suggestions from './Suggestions';
 import Container from '../shared/Container';
 import styles from './Searchbar.module.css'
@@ -15,7 +16,6 @@ const Searchbar = () => {
         isResolved,
         isRejected] = useSuggestion()
 
-
     const handleChange = (e) => {
         e.preventDefault();
         getSuggestions(inputRef.current.value);
@@ -24,7 +24,7 @@ const Searchbar = () => {
     return (
         <div className={styles.Searchbar}>
             <Container>
-                <Input onChange={(e) => handleChange(e)} onButtonClick={(e) => handleSearch(e)} placeholder="Pesquisar fundo, ação ou bdr" ref={inputRef} />
+                <Input suffix={<FaMagnifyingGlass />} onChange={(e) => handleChange(e)} onButtonClick={(e) => handleSearch(e)} placeholder="Pesquisar fundo, ação ou bdr" ref={inputRef} />
                 {!isIdle && (
                     <Suggestions loading={isLoading} suggestions={isResolved ? suggestions : null} />
                 )}
