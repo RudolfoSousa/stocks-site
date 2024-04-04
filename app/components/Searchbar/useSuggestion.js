@@ -1,9 +1,9 @@
-import useThrottle from '../shared/useThrottle/useThrottle';
+import useDebounce from '../shared/useDebounce/useDebounce';
 import { search } from '../../actions';
 import { useState } from 'react';
 
 export function useSuggestion() {
-    const throttleFunction = useThrottle();
+    const debounceFunction = useDebounce();
     const [suggestions, setSuggestions] = useState({ count: 0, status: 'idle' })
 
     const getSuggestions = (param) => {
@@ -11,9 +11,17 @@ export function useSuggestion() {
             ...state,
             status: 'pending'
         }))
-        
-        if (param && param !== "") {
-            throttleFunction(async () => {
+
+        if (param === "") {
+            setSuggestions((state) => ({
+                ...state,
+                status: 'idle'
+            }))
+            return;
+        }
+
+        debounceFunction(async () => {
+            if (param.trim().length >= 1) {
                 const res = await search(param);
                 if (res) {
                     setSuggestions({
@@ -26,13 +34,8 @@ export function useSuggestion() {
                         status: 'rejected'
                     }))
                 }
-            }, 1000);
-        } else {
-            setSuggestions((state) => ({
-                ...state,
-                status: 'idle'
-            }))
-        }
+            }
+        }, 500);
 
     }
 
