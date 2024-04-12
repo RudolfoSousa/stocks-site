@@ -21,7 +21,7 @@ export function useSuggestion() {
         }
 
         debounceFunction(async () => {
-            if (param.trim().length >= 1) {
+            if (param.trim().length >= 2) {
                 const res = await search(param);
                 if (res) {
                     setSuggestions({
