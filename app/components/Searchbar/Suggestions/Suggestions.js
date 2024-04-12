@@ -1,25 +1,21 @@
 'use client'
-
+import Loading from './Loading';
 import styles from './Suggestions.module.css'
 
 const Suggestions = ({ suggestions, loading }) => {
 
     if (loading) {
         return (
-            <div className={styles.Suggestions}>
-                <p>Loading</p>
-            </div>
-        );
+            <Loading />
+        )
     }
 
     if (!suggestions) {
         return null;
     }
 
-
     return (
         <div className={styles.Suggestions}>
-            {console.log(suggestions)}
             {suggestions.funds.length > 0 && (
                 <>
                     <h6 className={styles.Header}>Fundos Imobiliários</h6>
@@ -76,7 +72,6 @@ const Suggestions = ({ suggestions, loading }) => {
                     </ul>
                 </>
             )}
-
         </div>
     )
 }
