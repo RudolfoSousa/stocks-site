@@ -1,0 +1,19 @@
+.Skeleton {
+    border-radius: 4px;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #9BACBF;
+        box-shadow: 0px 0px 2px #E6EAEF;
+    }
+    70% {
+        background-color: #E6EAEF;
+        box-shadow: 0px 0px 2px #9BACBF;
+    }
+    100% {
+        background-color: #9BACBF;
+        box-shadow: 0px 0px 2px #E6EAEF;
+    }
+}
