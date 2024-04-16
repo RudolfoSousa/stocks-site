@@ -7,14 +7,14 @@
     position: absolute;
     left: 0;
     top: 0;
-    padding: 10px;
+    padding: var(--spacing-5);
 }
 
 .Suffix {
     position: absolute;
     right: 0px;
     top: 0px;
-    padding: 10px 15px;
+    padding: var(--spacing-5) var(--spacing-7);
 }
 
 .Input {
@@ -22,8 +22,8 @@
     box-sizing: border-box;
     border-radius: 4px;
     border: none;
-    background-color: #F2F4F7;
-    font-size: 14px;
+    background-color: var(--surface-gray);
+    font-size: var(--text-size-3);
     padding: 10px 5px 10px 5px;
 }
 

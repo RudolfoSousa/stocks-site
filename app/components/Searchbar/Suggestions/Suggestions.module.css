@@ -1,24 +1,25 @@
 .Suggestions {
     border: none;
     border-radius: 4px;
-    padding: 10px;
+    padding: var(--spacing-5);
     max-height: 200px;
     overflow: auto;
     position: absolute;
-    background-color: #fff;
+    background-color: var(--surface-white);
     z-index: 2;
-    top: 41px;
+    top: calc(var(--spacing-8)*2);
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    box-shadow: 0px 4px 20px 0px #C8D1E4;
+    box-shadow: 0px 4px 20px 0px var(--surface-shadow);
 }
 
 .Header {
-    font-size: 18px;
+    font-size: var(--text-size-6);
     font-weight: 600;
-    margin-bottom: 8px;
-    border-bottom: 1px solid #B8336A;
+    margin-bottom: var(--spacing-4);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--surface-brand);
 }
 
 .List {
@@ -28,7 +29,7 @@
 }
 
 .List:last-child{
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-5);
 }
 
 .Stock,
@@ -38,17 +39,18 @@
 }
 
 .Stock {
-    font-size: 14px;
+    font-size: var(--text-size-3);
     font-weight: 500;
+    color: var(--text-primary);
 }
 
 .Name {
-    font-size: 10px;
+    font-size: var(--text-size-1);
     margin-top: 1px;
-    margin-bottom: 5px;
-    color: #6F6866;
+    margin-bottom: var(--spacing-3);
+    color: var(--text-secondary);
 }
 
 .Close {
-    font-size: 12px;
+    font-size: var(--text-size-2);
 }
