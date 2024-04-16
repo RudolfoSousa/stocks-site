@@ -1,4 +1,46 @@
-*{
+* {
   padding: 0;
   margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+:root {
+  /*TEXT*/
+
+  /*Colors*/
+  --text-brand: #B8336A;
+  --text-primary: #171215;
+  --text-secondary: #838386;
+
+  /*Size*/
+  --text-size-1: 10px;
+  --text-size-2: 12px;
+  --text-size-3: 14px;
+  --text-size-4: 16px;
+  --text-size-5: 18px;
+  --text-size-6: 20px;
+  --text-size-7: 24px;
+  --text-size-8: 30px;
+
+  /*SURFACE*/
+
+  /*Spacing*/
+  --spacing-1: 2px;
+  --spacing-2: 4px;
+  --spacing-3: 6px;
+  --spacing-4: 8px;
+  --spacing-5: 10px;
+  --spacing-6: 12px;
+  --spacing-7: 14px;
+  --spacing-8: 16px;
+
+  /*Colors*/
+  --surface-brand: #B8336A;
+  --surface-white: #F6F4F5;
+  --surface-gray: #E6EBEF;
+  --surface-shadow: #C8D1E4;
+
 }
