@@ -10,7 +10,7 @@ import OutsideClickHandler from '../shared/OutsideClickHandler';
 
 const Searchbar = () => {
     const inputRef = useRef(null);
-    const [showSuggestion, setShowSuggestion] = useState(true);
+    const [showSuggestion, setShowSuggestion] = useState(false);
     const [suggestions,
         getSuggestions,
         isIdle,
@@ -25,9 +25,7 @@ const Searchbar = () => {
 
     const handleFocus = (e) => {
         e.preventDefault();
-        if (isResolved) {
-            setShowSuggestion(true);
-        }
+        setShowSuggestion(true);
     }
 
     const shouldRenderSuggestions = Boolean(!isIdle && (isResolved || isLoading) && showSuggestion)
