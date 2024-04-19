@@ -1,0 +1,24 @@
+.CloseWrapper {
+    position: relative;
+    height: 32px;
+    width: 32px;
+    background-color: transparent;
+    border: none;
+}
+
+.CloseItem {
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 3px;
+    background-color: var(--surface-black);
+    border-radius: var(--surface-radius-1);
+}
+
+.CloseItem:first-child{
+    transform: rotate(45deg);
+}
+
+.CloseItem:last-child{
+    transform: rotate(-45deg);
+}

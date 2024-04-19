@@ -1,0 +1,49 @@
+.Drawer {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    background-color: var(--surface-white);
+    width: 90vw;
+    height: 100vh;
+    transition: left .3s;
+    border-radius: 0 var(--surface-radius-1) var(--surface-radius-1) 0;
+}
+
+.Drawer.Open {
+    left: 0;
+}
+
+.Overlay {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    position: fixed;
+}
+
+.OpenOverlay {
+    backdrop-filter: blur(3px) contrast(.5);
+    transition: backdrop-filter .2s;
+    z-index: 2;
+}
+
+.HeaderContent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: 1px solid var(--surface-gray);
+    padding-bottom: var(--spacing-5);
+    margin-bottom: var(--spacing-8)
+}
+
+.List {
+    border-bottom: 1px solid var(--surface-brand);
+    padding-bottom: var(--spacing-5);
+    margin-bottom: var(--spacing-8);
+}
+
+.Item {
+
+}
