@@ -14,6 +14,9 @@
   --text-brand: #B8336A;
   --text-primary: #171215;
   --text-secondary: #838386;
+  --text-white: #F6F4F5;
+  --text-success: #47AE6E;
+  --text-alert: #8B1E3F;
 
   /*Size*/
   --text-size-1: 10px;
@@ -39,8 +42,16 @@
 
   /*Colors*/
   --surface-brand: #B8336A;
+  --surface-seconday: #5299D3;
+  --surface-vertical: #DD6E42;
   --surface-white: #F6F4F5;
+  --surface-black: #171215;
   --surface-gray: #E6EBEF;
   --surface-shadow: #C8D1E4;
+
+  /*Radius*/
+  --surface-radius-1: 4px;
+  --surface-radius-2: 8px;
+  --surface-radius-3: 10px;
 
 }
