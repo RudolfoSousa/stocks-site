@@ -1,0 +1,19 @@
+.Card {
+    box-shadow: 0px 0px 10px 0px var(--surface-shadow);
+    border-radius: var(--surface-radius-1);
+    overflow: hidden;
+    width: 150px;
+}
+
+.Header {
+    background-color: var(--surface-brand);
+    padding: var(--spacing-4) var(--spacing-2);
+    border-radius: var(--surface-radius-1);
+    color: var(--text-white);
+    font-weight: 600;
+    font-size: var(--text-size-3);
+}
+
+.Content {
+    padding: var(--spacing-4) var(--spacing-2);
+}
