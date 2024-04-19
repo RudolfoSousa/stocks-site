@@ -1,0 +1,18 @@
+.BurgerWrapper{
+    position: relative;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+.BurgerItem{
+    width: 24px;
+    height: 3px;
+    background-color: var(--surface-white);
+    border-radius: var(--surface-radius-1);
+}
