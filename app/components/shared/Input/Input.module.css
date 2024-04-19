@@ -20,7 +20,7 @@
 .Input {
     width: 100%;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: var(--surface-radius-1);
     border: none;
     background-color: var(--surface-gray);
     font-size: var(--text-size-3);

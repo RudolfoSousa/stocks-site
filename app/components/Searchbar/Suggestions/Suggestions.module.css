@@ -1,6 +1,6 @@
 .Suggestions {
     border: none;
-    border-radius: 4px;
+    border-radius: var(--surface-radius-1);
     padding: var(--spacing-5);
     max-height: 200px;
     overflow: auto;
