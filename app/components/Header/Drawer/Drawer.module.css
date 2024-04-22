@@ -2,7 +2,7 @@
     position: fixed;
     z-index: 3;
     top: 0;
-    left: -100vw;
+    left: -100%;
     background-color: var(--surface-white);
     width: 90vw;
     height: 100vh;
