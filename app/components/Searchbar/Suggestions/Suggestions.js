@@ -1,4 +1,3 @@
-'use client'
 import Loading from './Loading';
 import styles from './Suggestions.module.css'
 

@@ -2,14 +2,16 @@
     border: none;
     border-radius: var(--surface-radius-1);
     padding: var(--spacing-5);
+    margin: 0 var(--spacing-5);
     max-height: 200px;
     overflow: auto;
     position: absolute;
     background-color: var(--surface-white);
     z-index: 2;
-    top: calc(var(--spacing-8)*2);
+    top: calc(var(--spacing-8)*2.5);
     left: 0;
-    width: 100%;
+    width: -webkit-fill-available;
+    max-width: 100%;
     box-sizing: border-box;
     box-shadow: 0px 4px 20px 0px var(--surface-shadow);
 }
@@ -28,7 +30,7 @@
     align-items: center;
 }
 
-.List:last-child{
+.List:last-child {
     margin-bottom: var(--spacing-5);
 }
 
