@@ -39,7 +39,7 @@ const Header = () => {
     ]
 
     return (
-        <>
+        <header>
             <div className={style.Header}>
                 <Container>
                     <div className={style.Wrapper}>
@@ -61,7 +61,7 @@ const Header = () => {
                     })}
                 </DrawerList>
             </Drawer>
-        </>
+        </header>
     )
 }
 
