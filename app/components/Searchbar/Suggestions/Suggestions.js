@@ -1,5 +1,5 @@
 import Loading from './Loading';
-import styles from './Suggestions.module.css'
+import style from './Suggestions.module.css'
 
 const Suggestions = ({ suggestions, loading }) => {
 
@@ -14,19 +14,19 @@ const Suggestions = ({ suggestions, loading }) => {
     }
 
     return (
-        <div className={styles.Suggestions}>
+        <div className={style.Suggestions}>
             {suggestions.funds.length > 0 && (
                 <>
-                    <h6 className={styles.Header}>Fundos Imobiliários</h6>
+                    <h6 className={style.Header}>Fundos Imobiliários</h6>
                     <ul>
                         {suggestions.funds.map(({ stock, name, close }) => {
                             return (
-                                <li className={styles.List} key={stock}>
+                                <li className={style.List} key={stock}>
                                     <div>
-                                        <span className={styles.Stock}>{stock}</span>
-                                        <span className={styles.Name}>{name}</span>
+                                        <span className={style.Stock}>{stock}</span>
+                                        <span className={style.Name}>{name}</span>
                                     </div>
-                                    <span className={styles.Close}>R$ {close}</span>
+                                    <span className={style.Close}>R$ {close}</span>
                                 </li>
                             )
                         })}
@@ -36,16 +36,16 @@ const Suggestions = ({ suggestions, loading }) => {
 
             {suggestions.stocks.length > 0 && (
                 <>
-                    <h6 className={styles.Header}>Ações</h6>
+                    <h6 className={style.Header}>Ações</h6>
                     <ul>
                         {suggestions.stocks.map(({ stock, name, close }) => {
                             return (
-                                <li className={styles.List} key={stock}>
+                                <li className={style.List} key={stock}>
                                     <div>
-                                        <span className={styles.Stock}>{stock}</span>
-                                        <span className={styles.Name}>{name}</span>
+                                        <span className={style.Stock}>{stock}</span>
+                                        <span className={style.Name}>{name}</span>
                                     </div>
-                                    <span className={styles.Close}>R$ {close}</span>
+                                    <span className={style.Close}>R$ {close}</span>
                                 </li>
                             )
                         })}
@@ -55,16 +55,16 @@ const Suggestions = ({ suggestions, loading }) => {
 
             {suggestions.bdrs.length > 0 && (
                 <>
-                    <h6 className={styles.Header}>BDRs</h6>
+                    <h6 className={style.Header}>BDRs</h6>
                     <ul>
                         {suggestions.bdrs.map(({ stock, name, close }) => {
                             return (
-                                <li className={styles.List} key={stock}>
+                                <li className={style.List} key={stock}>
                                     <div>
-                                        <span className={styles.Stock}>{stock}</span>
-                                        <span className={styles.Name}>{name}</span>
+                                        <span className={style.Stock}>{stock}</span>
+                                        <span className={style.Name}>{name}</span>
                                     </div>
-                                    <span className={styles.Close}>R$ {close}</span>
+                                    <span className={style.Close}>R$ {close}</span>
                                 </li>
                             )
                         })}

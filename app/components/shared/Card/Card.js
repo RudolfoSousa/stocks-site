@@ -1,9 +1,9 @@
-import styles from './Card.module.css'
+import style from './Card.module.css'
 
 const Card = (props) => {
     const { children } = props
     return (
-        <div className={styles.Card}>
+        <div className={style.Card}>
             {children}
         </div>
     )
