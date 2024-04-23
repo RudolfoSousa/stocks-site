@@ -1,12 +1,16 @@
 'use server'
 
+const BASEURL = `${process.env.brapiBaseUrl}/quote`
+const TOKEN = process.env.brapiApiToken
+
+const headers = {
+    'Authorization': `Bearer ${TOKEN}`
+}
+
 export async function search(param) {
-    const URL = `${process.env.brapiBaseUrl}/quote/list?search=${param} `;
-    const TOKEN = process.env.brapiApiToken
+    const URL = `${BASEURL}/list?search=${param} `;
     const res = await fetch(URL, {
-        headers: {
-            'Authorization': `Bearer ${TOKEN}`
-        },
+        headers,
     })
 
     if (res.status != 200) {
@@ -25,4 +29,18 @@ export async function search(param) {
     } else {
         return null
     }
+}
+
+export async function getStock(params) {
+    const {order = "desc", limit = 5, type = 'fund', sort = ""} = params;
+    const URL = `${BASEURL}/list?sortOrder=${order}&limit=${limit}&type=${type}&sortBy=${sort}`;
+    const res = await fetch(URL, {
+        headers
+    })
+
+    const data = await res.json();
+
+    console.log(data)
+
+    return data;
 }
