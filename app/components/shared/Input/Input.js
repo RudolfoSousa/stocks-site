@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import style from './Input.module.css'
 
-const Input = forwardRef((props, ref) => {
+const Input = forwardRef(function Input(props, ref) {
     const { prefix, suffix } = props;
     return (
         <div className={style.InputWrapper}>
