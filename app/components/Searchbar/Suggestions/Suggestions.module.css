@@ -35,8 +35,7 @@
 }
 
 .Stock,
-.Name,
-.Close {
+.Name {
     display: block;
 }
 
@@ -51,8 +50,4 @@
     margin-top: 1px;
     margin-bottom: var(--spacing-3);
     color: var(--text-secondary);
-}
-
-.Close {
-    font-size: var(--text-size-2);
 }
