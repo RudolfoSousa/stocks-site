@@ -23,7 +23,7 @@ const Price = (props) => {
                     R$ {close.toFixed(2)}
                 </span>
             )}
-            {change && (
+            {change && change !== 0 && (
                 <span className={changeClassnames}>
                     {!changeNegative ? <FaArrowTrendUp /> : <FaArrowTrendDown />}
                     {change.toFixed(2)}%
