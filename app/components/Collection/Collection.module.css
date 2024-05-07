@@ -53,38 +53,3 @@
     font-weight: 300;
     display: block;
 }
-
-.PriceWrapper {
-    display: flex;
-    flex-direction: column;
-    margin-left: var(--spacing-3);
-}
-
-.Close {
-    color: var(--text-primary);
-    font-weight: 700;
-    font-size: var(--text-size-3);
-}
-
-.ChangeSuccess {
-    color: var(--text-success);
-    font-weight: 400;
-    font-size: var(--text-size-2);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.ChangeAlert {
-    color: var(--text-alert);
-    font-weight: 400;
-    font-size: var(--text-size-2);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.ChangeSuccess svg,
-.ChangeAlert svg {
-    margin-right: var(--spacing-3);
-}

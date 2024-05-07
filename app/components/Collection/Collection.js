@@ -1,13 +1,12 @@
 import Container from "../shared/Container";
-import { FaArrowTrendUp } from "react-icons/fa6";
-import { FaArrowTrendDown } from "react-icons/fa6";
 import style from './Collection.module.css';
-import { getStock } from "@/app/actions";
+import { getStocks } from "@/app/actions";
 import Link from "next/link";
+import Price from "../Price";
 
 export default async function Collection(props) {
     const { type = "fund", limit = 10, heading } = props;
-    const data = await getStock({ type, limit });
+    const data = await getStocks({ type, limit });
     const { stocks } = data;
 
     const types = {
@@ -40,15 +39,7 @@ export default async function Collection(props) {
                                                     {name}
                                                 </span>
                                             </div>
-                                            <div className={style.PriceWrapper}>
-                                                <span className={style.Close}>
-                                                    R$ {close.toFixed(2)}
-                                                </span>
-                                                <span className={!changeNegative ? style.ChangeSuccess : style.ChangeAlert}>
-                                                    {!changeNegative ? <FaArrowTrendUp /> : <FaArrowTrendDown />}
-                                                    {change.toFixed(2)}%
-                                                </span>
-                                            </div>
+                                            <Price close={close} change={change} />
                                         </div>
                                     </Link>
                                 </li>
