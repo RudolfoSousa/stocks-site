@@ -31,7 +31,7 @@ export async function search(param) {
     }
 }
 
-export async function getStock(params) {
+export async function getStocks(params) {
     const {order = "desc", limit = 5, type = 'fund', sort = ""} = params;
     const URL = `${BASEURL}/list?sortOrder=${order}&limit=${limit}&type=${type}&sortBy=${sort}`;
     const res = await fetch(URL, {
@@ -40,7 +40,17 @@ export async function getStock(params) {
 
     const data = await res.json();
 
-    console.log(data)
+    return data;
+}
+
+export async function getStock(params) {
+    const {tickers} = params;
+    const URL = `${BASEURL}/${tickers}`;
+    const res = await fetch(URL, {
+        headers
+    })
+
+    const data = await res.json();
 
     return data;
 }
