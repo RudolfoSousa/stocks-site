@@ -1,0 +1,36 @@
+.Wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: var(--spacing-3);
+}
+
+.Close {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: var(--text-size-3);
+}
+
+.Change {
+    font-weight: 400;
+    font-size: var(--text-size-2);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.Positive {
+    color: var(--text-success);
+}
+
+.Negative {
+    color: var(--text-alert);
+    justify-content: flex-end;
+}
+
+.Change svg {
+    margin-right: var(--spacing-3);
+}
+
+.small .Close {
+    font-size: var(--text-size-1);
+}
