@@ -1,9 +1,9 @@
-import style from './Drawer.module.css';
+import styles from './Drawer.module.css';
 
 const DrawerList = (props) => {
     const {children} = props;
     return (
-        <ul className={style.List}>
+        <ul className={styles.List}>
             {children}
         </ul>
     )

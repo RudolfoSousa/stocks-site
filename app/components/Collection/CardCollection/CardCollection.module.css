@@ -1,0 +1,36 @@
+.StockWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.Stock {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: var(--text-size-4);
+}
+
+.Name {
+    color: var(--text-secondary);
+    text-transform: lowercase;
+    font-size: var(--text-size-2);
+    font-weight: 300;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 90px;
+}
+
+.Button {
+    background-color: var(--surface-brand);
+    color: var(--text-white);
+    border: 1px solid var(--surface-brand);
+    padding: var(--spacing-5);
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,8 +1,8 @@
 .Card {
-    box-shadow: 0px 0px 10px 0px var(--surface-shadow);
+    border: 1px solid var(--surface-gray);
     border-radius: var(--surface-radius-1);
     overflow: hidden;
-    width: 150px;
+    width: 180px;
 }
 
 .Header {
@@ -16,4 +16,9 @@
 
 .Content {
     padding: var(--spacing-4) var(--spacing-2);
+}
+
+.Footer{
+    border-top: 1px solid var(--surface-gray);
+    display: flex;
 }

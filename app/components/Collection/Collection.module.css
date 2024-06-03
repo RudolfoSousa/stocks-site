@@ -1,4 +1,4 @@
-.HeaderWrapper{
+.HeaderWrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,7 +10,7 @@
     color: var(--text-primary);
 }
 
-.Link{
+.Link {
     color: var(--text-white);
     text-decoration: none;
     font-size: var(--text-size-3);
@@ -25,31 +25,4 @@
     padding: var(--spacing-3);
     box-shadow: 0px 3px 10px 0px var(--surface-shadow);
     border-radius: var(--surface-radius-1);
-}
-
-.StockWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.ListItem{
-    margin-bottom: var(--spacing-4);
-    border-bottom: 1px solid var(--surface-gray);
-    padding-bottom: var(--spacing-1);
-}
-
-.Stock{
-    color: var(--text-primary);
-    font-weight: 500;
-    font-size: var(--text-size-4);
-}
-
-.Name {
-    color: var(--text-secondary);
-    text-transform: lowercase;
-    font-size: var(--text-size-2);
-    font-weight: 300;
-    display: block;
 }

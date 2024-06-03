@@ -1,6 +1,6 @@
 import Price from '../../Price';
 import Loading from './Loading';
-import style from './Suggestions.module.css'
+import styles from './Suggestions.module.css';
 
 const Suggestions = ({ suggestions, loading }) => {
 
@@ -15,17 +15,17 @@ const Suggestions = ({ suggestions, loading }) => {
     }
 
     return (
-        <div className={style.Suggestions}>
+        <div className={styles.Suggestions}>
             {suggestions.funds.length > 0 && (
                 <>
-                    <h6 className={style.Header}>Fundos Imobiliários</h6>
+                    <h6 className={styles.Header}>Fundos Imobiliários</h6>
                     <ul>
                         {suggestions.funds.map(({ stock, name, close, change }) => {
                             return (
-                                <li className={style.List} key={stock}>
+                                <li className={styles.List} key={stock}>
                                     <div>
-                                        <span className={style.Stock}>{stock}</span>
-                                        <span className={style.Name}>{name}</span>
+                                        <span className={styles.Stock}>{stock}</span>
+                                        <span className={styles.Name}>{name}</span>
                                     </div>
                                     <Price close={close} change={change} />
                                 </li>
@@ -37,14 +37,14 @@ const Suggestions = ({ suggestions, loading }) => {
 
             {suggestions.stocks.length > 0 && (
                 <>
-                    <h6 className={style.Header}>Ações</h6>
+                    <h6 className={styles.Header}>Ações</h6>
                     <ul>
                         {suggestions.stocks.map(({ stock, name, close, change }) => {
                             return (
-                                <li className={style.List} key={stock}>
+                                <li className={styles.List} key={stock}>
                                     <div>
-                                        <span className={style.Stock}>{stock}</span>
-                                        <span className={style.Name}>{name}</span>
+                                        <span className={styles.Stock}>{stock}</span>
+                                        <span className={styles.Name}>{name}</span>
                                     </div>
                                     <Price close={close} change={change} />
                                 </li>
@@ -56,14 +56,14 @@ const Suggestions = ({ suggestions, loading }) => {
 
             {suggestions.bdrs.length > 0 && (
                 <>
-                    <h6 className={style.Header}>BDRs</h6>
+                    <h6 className={styles.Header}>BDRs</h6>
                     <ul>
                         {suggestions.bdrs.map(({ stock, name, close, change }) => {
                             return (
-                                <li className={style.List} key={stock}>
+                                <li className={styles.List} key={stock}>
                                     <div>
-                                        <span className={style.Stock}>{stock}</span>
-                                        <span className={style.Name}>{name}</span>
+                                        <span className={styles.Stock}>{stock}</span>
+                                        <span className={styles.Name}>{name}</span>
                                     </div>
                                     <Price close={close} change={change} />
                                 </li>

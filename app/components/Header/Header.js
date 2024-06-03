@@ -2,15 +2,15 @@
 import { useState } from 'react';
 import Container from '../shared/Container';
 import BurgerButton from './BurgerButton';
-import Drawer from './Drawer'
-import DrawerItem from './Drawer/DrawerItem';
-import DrawerList from './Drawer/DrawerList';
+import Drawer from '../shared/Drawer'
+import DrawerItem from '../shared/Drawer/DrawerItem';
+import DrawerList from '../shared/Drawer/DrawerList';
 import { FaHouse } from "react-icons/fa6";
 import { FaBuilding } from "react-icons/fa6";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import { usePathname } from 'next/navigation'
 import Link from 'next/link';
-import style from './Header.module.css';
+import styles from './Header.module.css';
 
 const Header = () => {
     const [open, setOpen] = useState(false);
@@ -40,9 +40,9 @@ const Header = () => {
 
     return (
         <header>
-            <div className={style.Header}>
+            <div className={styles.Header}>
                 <Container>
-                    <div className={style.Wrapper}>
+                    <div className={styles.Wrapper}>
                         <BurgerButton onClick={(e) => handleClick(e)} />
                     </div>
                 </Container>
@@ -52,7 +52,7 @@ const Header = () => {
                     {navigationItems.map(({ label, href, icon }) => {
                         return (
                             <DrawerItem key={label}>
-                                <Link href={href} className={`${style.Item} ${pathname === href && style.Active}`}>
+                                <Link onClick={() => setOpen(false)} href={href} className={`${styles.Item} ${pathname === href && styles.Active}`}>
                                     <span>{icon}</span>
                                     {label}
                                 </Link>

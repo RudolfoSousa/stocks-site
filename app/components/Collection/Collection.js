@@ -1,8 +1,8 @@
 import Container from "../shared/Container";
-import style from './Collection.module.css';
+import styles from './Collection.module.css';
 import { getStocks } from "@/app/actions";
 import Link from "next/link";
-import Price from "../Price";
+import CardList from './CardList/CardList';
 
 export default async function Collection(props) {
     const { type = "fund", limit = 10, heading } = props;
@@ -16,38 +16,14 @@ export default async function Collection(props) {
 
     return (
         <Container>
-            <div className={style.HeaderWrapper}>
+            <div className={styles.HeaderWrapper}>
                 {heading && (
-                    <h1 className={style.Heading}>{heading}</h1>
+                    <h1 className={styles.Heading}>{heading}</h1>
                 )}
-                <Link className={style.Link} href={`/${types[type]}`}>Ver tudo</Link>
+                <Link className={styles.Link} href={`/${types[type]}`}>Ver tudo</Link>
             </div>
-            <div className={style.Wrapper}>
-                <ul className={style.List}>
-                    {
-                        stocks.map(({ stock, name, close, change }) => {
-                            const changeNegative = change < 0
-                            return (
-                                <li key={stock} className={style.ListItem}>
-                                    <Link href={`/${types[type]}/${stock}`}>
-                                        <div className={style.StockWrapper}>
-                                            <div className={style.NameWrapper}>
-                                                <span className={style.Stock}>
-                                                    {stock}
-                                                </span>
-                                                <span className={style.Name}>
-                                                    {name}
-                                                </span>
-                                            </div>
-                                            <Price close={close} change={change} />
-                                        </div>
-                                    </Link>
-                                </li>
-                            )
-
-                        })
-                    }
-                </ul>
+            <div className={styles.Wrapper}>
+                <CardList stocks={stocks} type={type} />
             </div>
         </Container>
     );

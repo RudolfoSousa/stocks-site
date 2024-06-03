@@ -1,16 +1,17 @@
 import classnames from 'classnames';
-import style from './Drawer.module.css'
-import Container from '../../shared/Container';
+import styles from './Drawer.module.css'
+import Container from '../Container';
 import CloseButton from './CloseButton/CloseButton';
-import OutsideClickHandler from '../../shared/OutsideClickHandler';
+import OutsideClickHandler from '../OutsideClickHandler';
 
 const Drawer = (props) => {
-    const { open, onclose, children } = props;
-    const drawerClassNames = classnames(style.Drawer, {
-        [style.Open]: open
+    const { open, onclose, children, down } = props;
+    const drawerClassNames = classnames(styles.Drawer, {
+        [styles.Open]: open,
+        [styles.Down]: down
     })
-    const overlayClassNames = classnames(style.Overlay, {
-        [style.OpenOverlay]: open
+    const overlayClassNames = classnames(styles.Overlay, {
+        [styles.OpenOverlay]: open
     })
 
 
@@ -20,7 +21,7 @@ const Drawer = (props) => {
             <OutsideClickHandler onOutsideClick={() => onclose()}>
                 <div className={drawerClassNames}>
                     <Container>
-                        <div className={style.HeaderContent}>
+                        <div className={styles.HeaderContent}>
                             <CloseButton onClick={onclose} />
                         </div>
                         {children}

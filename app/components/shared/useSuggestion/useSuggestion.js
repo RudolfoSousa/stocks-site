@@ -1,5 +1,5 @@
-import useDebounce from '../shared/useDebounce/useDebounce';
-import { search } from '../../actions';
+import useDebounce from '../useDebounce/useDebounce';
+import { search } from '../../../actions';
 import { useState } from 'react';
 
 export function useSuggestion() {
