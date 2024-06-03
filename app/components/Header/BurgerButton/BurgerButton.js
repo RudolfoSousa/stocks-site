@@ -1,12 +1,12 @@
-import style from './BurgerButton.module.css'
+import styles from './BurgerButton.module.css'
 
 const BurgerButton = (props) => {
     const { onClick } = props;
     return (
-        <button onClick={onClick} className={style.BurgerWrapper}>
-            <div className={style.BurgerItem}></div>
-            <div className={style.BurgerItem}></div>
-            <div className={style.BurgerItem}></div>
+        <button onClick={onClick} className={styles.BurgerWrapper}>
+            <div className={styles.BurgerItem}></div>
+            <div className={styles.BurgerItem}></div>
+            <div className={styles.BurgerItem}></div>
         </button>
     )
 }

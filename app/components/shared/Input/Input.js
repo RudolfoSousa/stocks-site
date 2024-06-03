@@ -1,17 +1,17 @@
 import { forwardRef } from 'react';
-import style from './Input.module.css'
+import styles from './Input.module.css'
 
 const Input = forwardRef(function Input(props, ref) {
     const { prefix, suffix } = props;
     return (
-        <div className={style.InputWrapper}>
+        <div className={styles.InputWrapper}>
             <label>
                 {prefix && (
-                    <div className={style.Prefix}>{prefix}</div>
+                    <div className={styles.Prefix}>{prefix}</div>
                 )}
-                <input className={style.Input} {...props} ref={ref} />
+                <input className={styles.Input} {...props} ref={ref} />
                 {suffix && (
-                    <div className={style.Suffix}>{suffix}</div>
+                    <div className={styles.Suffix}>{suffix}</div>
                 )}
             </label>
         </div>

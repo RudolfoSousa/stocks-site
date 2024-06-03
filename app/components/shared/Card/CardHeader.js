@@ -1,9 +1,9 @@
-import style from './Card.module.css'
+import styles from './Card.module.css'
 
 const CardHeader = (props) => {
     const { children } = props;
     return (
-        <div className={style.Header}>{children}</div>
+        <div className={styles.Header}>{children}</div>
     )
 }
 

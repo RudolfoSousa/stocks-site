@@ -1,4 +1,4 @@
-import style from './Skeleton.module.css'
+import styles from './Skeleton.module.css'
 
 const Skeleton = (props) => {
     const { width = "100px", height = "15px" } = props;
@@ -7,7 +7,7 @@ const Skeleton = (props) => {
         height
     }
     return (
-        <div style={{ ...stylesProps }} className={style.Skeleton} />
+        <div style={{ ...stylesProps }} className={styles.Skeleton} />
     )
 }
 

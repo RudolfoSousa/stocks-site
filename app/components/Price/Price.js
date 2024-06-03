@@ -1,25 +1,25 @@
 import { FaArrowTrendUp } from "react-icons/fa6";
 import { FaArrowTrendDown } from "react-icons/fa6";
 import classNames from "classnames";
-import style from './Price.module.css';
+import styles from './Price.module.css';
 
 const Price = (props) => {
     const { close, change, size } = props;
     const changeNegative = change < 0;
 
-    const changeClassnames = classNames(style.Change, {
-        [style.Negative]: changeNegative,
-        [style.Positive]: !changeNegative
+    const changeClassnames = classNames(styles.Change, {
+        [styles.Negative]: changeNegative,
+        [styles.Positive]: !changeNegative
     })
 
-    const wrapperClassnames = classNames(style.Wrapper, {
-        [style[size]]: size
+    const wrapperClassnames = classNames(styles.Wrapper, {
+        [styles[size]]: size
     })
 
     return (
         <div className={wrapperClassnames}>
             {close && (
-                <span className={style.Close}>
+                <span className={styles.Close}>
                     R$ {close.toFixed(2)}
                 </span>
             )}
