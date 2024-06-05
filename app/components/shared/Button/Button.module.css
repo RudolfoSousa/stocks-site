@@ -1,0 +1,16 @@
+.Button {
+    box-sizing: border-box;
+    background-color: var(--surface-brand);
+    color: var(--text-white);
+    border: 1px solid var(--surface-brand);
+    padding: var(--spacing-5);
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Button span{
+    margin: 0px var(--spacing-4);
+}
