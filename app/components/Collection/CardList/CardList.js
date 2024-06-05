@@ -1,16 +1,12 @@
-'use client'
-
-import { useCompare } from "../../shared/CompareProvider";
 import CardCollection from "../CardCollection/CardCollection";
 import styles from './CardList.module.css';
 
 const CardList = ({ stocks, type }) => {
-    const { addStock } = useCompare();
     return (
         <ul className={styles.List}>
             {stocks.map(({ stock, name, close, change }) => {
                 const cardProps = {
-                    stock, name, close, change, type, action: addStock
+                    stock, name, close, change, type
                 }
 
                 return (
@@ -21,7 +17,6 @@ const CardList = ({ stocks, type }) => {
             })}
         </ul>
     )
-
 }
 
 export default CardList;
