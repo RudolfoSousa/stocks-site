@@ -7,6 +7,7 @@ import styles from './Comparator.module.css'
 import Drawer from "../Drawer";
 import { useState } from "react";
 import Container from "../Container";
+import Button from "../Button";
 
 const Comparator = () => {
     const { stocks, removeStock } = useCompare();
@@ -24,9 +25,9 @@ const Comparator = () => {
             {stocks.length > 0 && (
                 <>
                     <div className={styles.FloatingContainer}>
-                        <button onClick={() => setOpen(true)} className={styles.FloatingButton}>
+                        <Button variant="round" onClick={() => setOpen(true)}>
                             <FaCoins />
-                        </button>
+                        </Button>
                     </div>
 
                     <Drawer onclose={() => setOpen(false)} open={open} down>
@@ -36,10 +37,10 @@ const Comparator = () => {
                                 stocks.map((stock) => {
                                     return (
                                         <>
-                                            <p>{stock}</p>
-                                            <button onClick={() => handleClick(stock)}>
+                                            <span>{stock}</span>
+                                            <Button onClick={() => handleClick(stock)}>
                                                 <FaTrash />
-                                            </button>
+                                            </Button>
                                         </>
                                     )
                                 })
