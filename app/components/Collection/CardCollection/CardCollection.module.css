@@ -22,15 +22,3 @@
     white-space: nowrap;
     max-width: 90px;
 }
-
-.Button {
-    background-color: var(--surface-brand);
-    color: var(--text-white);
-    border: 1px solid var(--surface-brand);
-    padding: var(--spacing-5);
-    font-weight: 600;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
