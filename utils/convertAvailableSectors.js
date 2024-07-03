@@ -21,7 +21,8 @@ const availableSectors = {
     // 'Consumer Durables'
     'Financial Services': 'Finance',
     'Basic Materials': 'Consumer Durables',
-    'Utilities': 'Utilities'
+    'Utilities': 'Utilities',
+    'Real Estate': 'Miscellaneous'
 }
 
 export default function convertAvailableServices(sector) {
