@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Price from '../../Price';
 import Loading from './Loading';
 import styles from './Suggestions.module.css';
@@ -22,12 +23,14 @@ const Suggestions = ({ suggestions, loading }) => {
                     <ul>
                         {suggestions.funds.map(({ stock, name, close, change }) => {
                             return (
-                                <li className={styles.List} key={stock}>
-                                    <div>
-                                        <span className={styles.Stock}>{stock}</span>
-                                        <span className={styles.Name}>{name}</span>
-                                    </div>
-                                    <Price close={close} change={change} />
+                                <li className={styles.ListItem} key={stock}>
+                                    <Link className={styles.List} href={`/fundos-imobiliarios/${stock}`}>
+                                        <div>
+                                            <span className={styles.Stock}>{stock}</span>
+                                            <span className={styles.Name}>{name}</span>
+                                        </div>
+                                        <Price close={close} change={change} />
+                                    </Link>
                                 </li>
                             )
                         })}
@@ -41,12 +44,14 @@ const Suggestions = ({ suggestions, loading }) => {
                     <ul>
                         {suggestions.stocks.map(({ stock, name, close, change }) => {
                             return (
-                                <li className={styles.List} key={stock}>
-                                    <div>
-                                        <span className={styles.Stock}>{stock}</span>
-                                        <span className={styles.Name}>{name}</span>
-                                    </div>
-                                    <Price close={close} change={change} />
+                                <li className={styles.ListItem} key={stock}>
+                                    <Link className={styles.List} href={`/acoes/${stock}`}>
+                                        <div>
+                                            <span className={styles.Stock}>{stock}</span>
+                                            <span className={styles.Name}>{name}</span>
+                                        </div>
+                                        <Price close={close} change={change} />
+                                    </Link>
                                 </li>
                             )
                         })}
@@ -60,12 +65,14 @@ const Suggestions = ({ suggestions, loading }) => {
                     <ul>
                         {suggestions.bdrs.map(({ stock, name, close, change }) => {
                             return (
-                                <li className={styles.List} key={stock}>
-                                    <div>
-                                        <span className={styles.Stock}>{stock}</span>
-                                        <span className={styles.Name}>{name}</span>
-                                    </div>
-                                    <Price close={close} change={change} />
+                                <li className={styles.ListItem} key={stock}>
+                                    <Link className={styles.List} href={`/bdrs/${stock}`}>
+                                        <div>
+                                            <span className={styles.Stock}>{stock}</span>
+                                            <span className={styles.Name}>{name}</span>
+                                        </div>
+                                        <Price close={close} change={change} />
+                                    </Link>
                                 </li>
                             )
                         })}

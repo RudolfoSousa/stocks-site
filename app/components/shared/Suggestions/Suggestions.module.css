@@ -24,15 +24,20 @@
     border-bottom: 1px solid var(--surface-brand);
 }
 
+.ListItem:last-child {
+    margin-bottom: var(--spacing-3);
+}
+
+.ListItem {
+    margin-top: var(--spacing-3);
+}
+
 .List {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.List:last-child {
-    margin-bottom: var(--spacing-5);
-}
 
 .Stock,
 .Name {
