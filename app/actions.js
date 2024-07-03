@@ -32,8 +32,8 @@ export async function search(param) {
 }
 
 export async function getStocks(params) {
-    const {order = "desc", limit = 5, type = 'fund', sort = ""} = params;
-    const URL = `${BASEURL}/list?sortOrder=${order}&limit=${limit}&type=${type}&sortBy=${sort}`;
+    const {order = "desc", limit = 5, type = 'fund', sort = "", sector = ""} = params;
+    const URL = `${BASEURL}/list?sortOrder=${order}&limit=${limit}&type=${type}&sortBy=${sort}&sector=${sector}`;
     const res = await fetch(URL, {
         headers
     })
@@ -45,7 +45,7 @@ export async function getStocks(params) {
 
 export async function getStock(params) {
     const {tickers} = params;
-    const URL = `${BASEURL}/${tickers}`;
+    const URL = `${BASEURL}/${tickers}?range=3mo&interval=1d&modules=summaryProfile`;
     const res = await fetch(URL, {
         headers
     })
