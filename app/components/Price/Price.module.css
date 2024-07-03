@@ -1,7 +1,9 @@
 .Wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-left: var(--spacing-3);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: start;
+    justify-items: start;
+    align-items: stretch;
 }
 
 .Close {
@@ -32,5 +34,33 @@
 }
 
 .small .Close {
+    font-size: var(--text-size-2);
+}
+
+.small .Change {
     font-size: var(--text-size-1);
+}
+
+.medium .Close {
+    font-size: var(--text-size-3);
+}
+
+.medium .Change {
+    font-size: var(--text-size-2);
+}
+
+.large .Close {
+    font-size: var(--text-size-5);
+}
+
+.large .Change {
+    font-size: var(--text-size-3);
+}
+
+.xlarge .Close{
+    font-size: var(--text-size-8);
+}
+
+.xlarge .Change {
+    font-size: var(--text-size-6);
 }
