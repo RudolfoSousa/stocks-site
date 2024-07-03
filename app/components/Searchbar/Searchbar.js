@@ -1,4 +1,5 @@
 'use client'
+
 import { useRef, useState } from 'react';
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import Input from "../shared/Input";

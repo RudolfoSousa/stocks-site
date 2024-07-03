@@ -1,8 +1,12 @@
+import classnames from 'classnames';
 import styles from './Container.module.css'
 
-const Container = ({children}) => {
+const Container = ({children, overflow}) => {
+    const classNames = classnames(styles.Container, {
+        [styles.Overflow]: overflow
+    })
     return (
-        <div className={styles.Container}>
+        <div className={classNames}>
             {children}
         </div>
     )

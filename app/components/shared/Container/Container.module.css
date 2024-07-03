@@ -1,4 +1,10 @@
 .Container {
     padding: var(--spacing-5);
     position: relative;
+    box-sizing: border-box;
+}
+
+.Overflow {
+    overflow: auto;
+    width: 100%;
 }

@@ -29,6 +29,16 @@
   --text-size-7: 24px;
   --text-size-8: 30px;
 
+  /*Weight*/
+  --text-weight-1: 100;
+  --text-weight-2: 200;
+  --text-weight-3: 300;
+  --text-weight-4: 400;
+  --text-weight-5: 500;
+  --text-weight-6: 600;
+  --text-weight-7: 700;
+  --text-weight-8: 800; 
+
   /*SURFACE*/
 
   /*Spacing*/
