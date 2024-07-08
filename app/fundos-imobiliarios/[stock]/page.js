@@ -6,10 +6,11 @@ import StockContentList from "./components/StockContentList/StockContentList";
 import StockContentItem from "./components/StockContentItem/StockContentItem";
 import Collection from "@/app/components/Collection";
 import convertAvailableSectors from "@/utils/convertAvailableSectors";
+import Chart from "@/app/components/shared/Chart";
 
 export default async function Page({ params }) {
   const data = await getStock({ tickers: params.stock });
-  const { shortName, regularMarketPrice, regularMarketChangePercent, fiftyTwoWeekLow, fiftyTwoWeekHigh, summaryProfile } = data.results[0];
+  const { shortName, regularMarketPrice, regularMarketChangePercent, fiftyTwoWeekLow, fiftyTwoWeekHigh, summaryProfile, historicalDataPrice } = data.results[0];
   return (
     <main>
       <Container>
@@ -67,6 +68,7 @@ export default async function Page({ params }) {
             </CardContent>
           </Card>
         </div>
+        <Chart data={historicalDataPrice} />
         {summaryProfile && summaryProfile.sector && (
           <Collection heading="Fundos Relacionados" sector={convertAvailableSectors(summaryProfile.sector)} />
         )}
